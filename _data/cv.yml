@@ -17,7 +17,7 @@ cv:
         url: https://www.upenn.edu/
         area: Computer and Information Science (CIS)
         studyType: Master's (MCIS)
-        start_date: 2024
+        start_date: 2025
         end_date: present
         highlights:
           - "Research on continuous latent chain-of-thought through normalizing flow with Prof. Jiatao Gu"
@@ -27,8 +27,8 @@ cv:
         url: https://ucsd.edu/
         area: Mathematics-Computer Science
         studyType: Bachelor of Science
-        start_date: 2020
-        end_date: 2024
+        start_date: 2021
+        end_date: 2025
         highlights:
           - "Worked with Yupeng Hou and Prof. Julian McAuley on BLaIR benchmark"
 
@@ -36,15 +36,15 @@ cv:
       - company: University of Pennsylvania
         position: Graduate Researcher
         location: Philadelphia, PA
-        start_date: 2024
+        start_date: 2025
         end_date: present
         summary: Working with Prof. Jiatao Gu on continuous latent chain-of-thought through normalizing flow for multimodal large language models.
 
       - company: University of California, San Diego
         position: Undergraduate Researcher
         location: San Diego, CA
-        start_date: 2023
-        end_date: 2024
+        start_date: 2024
+        end_date: 2025
         summary: Worked with Yupeng Hou and Prof. Julian McAuley on creating BLaIR, a novel benchmark for LLMs as semantic encoders in recommender system tasks.
 
     Skills:
