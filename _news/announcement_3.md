@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Began research with [Prof. Jiatao Gu](https://jiataogu.me/) and the GMLR group! 🙌
+Began research with [Prof. Jiatao Gu](https://jiataogu.me/) and the [GMLR group](https://jiataogu.me/team/)! 🙌
