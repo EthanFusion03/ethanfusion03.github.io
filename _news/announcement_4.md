@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper "Bridging Language and Items for Retrieval and Recommendation: Benchmarking LLMs as Semantic Encoders" has been accepted to **ACL 2026** Main Conference!
+Our paper **"Bridging Language and Items for Retrieval and Recommendation: Benchmarking LLMs as Semantic Encoders"** has been accepted to **ACL 2026** Main Conference!
