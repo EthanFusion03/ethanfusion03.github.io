@@ -32,4 +32,4 @@ I am a graduate student at the University of Pennsylvania, majoring in Computer 
 
 Currently, I am working with [Prof. Jiatao Gu](https://jiataogu.me/) on **continuous latent chain-of-thought through normalizing flow**. Before joining UPenn, I spent four wonderful years at UC San Diego, where I earned my Bachelor of Science in Mathematics-Computer Science. During those years, I worked with [PhD. Yupeng Hou](https://yupenghou.com/) and [Prof. Julian McAuley](https://cseweb.ucsd.edu/~jmcauley/) on creating a novel and user-friendly **benchmark for LLMs as semantic encoders in recommender system tasks ([BLaIR](https://arxiv.org/abs/2403.03952))**.
 
-Outside of academics and research, you can usually find me on a soccer field, a pickleball court, or just about any sports venue! I am always looking for training partners — feel free to hit me up!
+Outside of academics and research, you can usually find me on a soccer field ⚽, a pickleball court 🎾, or just about any sports venue! I am always looking for training partners — feel free to hit me up!
