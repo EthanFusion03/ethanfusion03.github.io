@@ -34,13 +34,3 @@ Currently, I am working with [Prof. Jiatao Gu](https://jiataogu.me/) on **contin
 
 Outside of academics and research, you can usually find me on soccer fields ⚽, pickleball courts 🎾, or just about any sports venues!
 
----
-
-## Visitor Flow
-
-<div style="text-align: center; margin-top: 1rem;">
-  <a href="https://mapmyvisitors.com/web/1c42m" title="Visit tracker">
-    <img src="https://mapmyvisitors.com/map.png?d=P75QEoZmAfQdk7sjFPiHao8ejT9Vg2Lkv49hlFz8P_Y&cl=ffffff" alt="Visitor map">
-  </a>
-</div>
-<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=P75QEoZmAfQdk7sjFPiHao8ejT9Vg2Lkv49hlFz8P_Y&cl=ffffff&w=a"></script>
