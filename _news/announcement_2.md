@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Graduated from **UC San Diego** with a B.S. in Mathematics-Computer Science, *cum laude*!
+Graduated from **UC San Diego** with a B.S. in Mathematics-Computer Science, *cum laude* !
