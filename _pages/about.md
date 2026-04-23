@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: MCIS Student @ <a href='https://www.upenn.edu/'>University of Pennsylvania</a> | B.S. Math-CS @ <a href='https://ucsd.edu/'>UC San Diego</a>
+subtitle: MCIS Student @ <a href='https://www.upenn.edu/' style='color:#990000;'>University of Pennsylvania</a> | B.S. Math-CS @ <a href='https://ucsd.edu/' style='color:#00629B;'>UC San Diego</a>
 
 profile:
   align: right
