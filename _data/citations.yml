@@ -1,7 +1,7 @@
 metadata:
-  last_updated: '2026-04-24'
+  last_updated: '2026-05-04'
 papers:
   FztLF6sAAAAJ:u5HHmVD_uO8C:
-    citations: 457
+    citations: 473
     title: 'Bridging language and items for retrieval and recommendation: Benchmarking LLMs as Semantic Encoders'
     year: '2026'
