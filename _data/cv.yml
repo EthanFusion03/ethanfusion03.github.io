@@ -1,10 +1,18 @@
 cv:
   name: Xiangjun (Ethan) Fu
-  label: Graduate Student
+  label: "Graduate Researcher, University of Pennsylvania"
   email: xjf@seas.upenn.edu
-  location: Philadelphia, PA
+  phone: "(858) 539-5848"
+  website: https://ethanfusion03.github.io
   image: ""
-  summary: MCIS student at UPenn interested in Multimodal Large Language Models, continuous generative modeling, and reasoning.
+  address:
+    city: Philadelphia
+    region: PA
+  summary: >-
+    M.S.E. student in Computer & Information Science at the University of
+    Pennsylvania. I work on latent reasoning for large language models —
+    continuous chain-of-thought via normalizing flows — and previously on
+    benchmarking LLMs as semantic encoders for retrieval and recommendation.
 
   social_networks:
     - network: GitHub
@@ -13,56 +21,90 @@ cv:
   sections:
     Education:
       - institution: University of Pennsylvania
-        location: Philadelphia, PA
         url: https://www.upenn.edu/
-        area: Computer and Information Science (CIS)
-        studyType: Master's (MCIS)
+        studyType: "M.S.E. in Computer & Information Science"
+        location: Philadelphia, PA
         start_date: 2025
-        end_date: present
+        end_date: 2027
         highlights:
-          - "Research on continuous latent chain-of-thought through normalizing flow with Prof. Jiatao Gu"
-
+          - "GPA: 3.95 / 4.0"
+          - "Relevant coursework: Statistical NLP, Deep Learning, Deep Generative Modeling, Reinforcement Learning, Machine Learning, Recommender Systems & Web Mining, Probability & Statistics"
       - institution: University of California, San Diego
-        location: San Diego, CA
         url: https://ucsd.edu/
-        area: Mathematics-Computer Science
-        studyType: Bachelor of Science
+        studyType: "B.S. in Mathematics–Computer Science"
+        location: San Diego, CA
         start_date: 2021
         end_date: 2025
         highlights:
-          - "Worked with Yupeng Hou and Prof. Julian McAuley on BLaIR benchmark"
+          - "GPA: 3.9 / 4.0 · Provost Honors"
 
     Experience:
-      - company: University of Pennsylvania
+      - company: GMLR Lab, University of Pennsylvania
         position: Graduate Researcher
         location: Philadelphia, PA
         start_date: 2025
         end_date: present
-        summary: Working with Prof. Jiatao Gu on continuous latent chain-of-thought through normalizing flow for multimodal large language models.
-
-      - company: University of California, San Diego
+        summary: Advised by Prof. Jiatao Gu.
+        highlights:
+          - "Designing a continuous latent chain-of-thought reasoning pipeline on a Qwen3-8B backbone that operates in a lower-dimensional space while preserving semantic structure."
+          - "Fine-tuning an LLM-based VAE encoder to provide semantic guidance for latent thinking-token generation; using normalizing flows to autoregressively generate thinking tokens under an MSE objective against VAE-encoded latents."
+          - "Computing step-wise log-likelihoods to enable reinforcement learning over reasoning trajectories, with evaluation protocols for trajectory selection."
+      - company: McAuley Lab, UC San Diego
         position: Undergraduate Researcher
         location: San Diego, CA
         start_date: 2024
         end_date: 2025
-        summary: Worked with Yupeng Hou and Prof. Julian McAuley on creating BLaIR, a novel benchmark for LLMs as semantic encoders in recommender system tasks.
+        summary: Advised by Prof. Julian McAuley and Yupeng Hou.
+        highlights:
+          - "Built an evaluation framework for benchmarking LLM text embeddings in retrieval and recommendation, including a public Amazon dataset with 2M+ training and 250K+ test instances."
+          - "Benchmarked embeddings from SimCSE, E5-Mistral-7B, text-embedding-3-large, Qwen-7B, Gemini, and OpenAI across collaborative filtering, sequential recommendation, and product search; co-first-authored the resulting ACL 2026 paper."
+      - company: Shang Data Lab, UC San Diego
+        position: Undergraduate Researcher
+        location: San Diego, CA
+        start_date: 2023
+        end_date: 2024
+        summary: Advised by Prof. Jingbo Shang and Letian Peng.
+        highlights:
+          - "Refined weakly supervised text classification, reaching 93% peak accuracy on AG News (vs. 78% baseline) via KL-divergence matching between token-level text and class-prompt distributions."
+          - "Implemented the framework in PyTorch with BERT, RoBERTa, and Gemma across AG News and Rotten Tomatoes."
+
+    Publications:
+      - title: "Bridging Language and Items for Retrieval and Recommendation: Benchmarking LLMs as Semantic Encoders"
+        date: "2026"
+        url: https://arxiv.org/abs/2403.03952
+        publisher: "ACL 2026 Main Conference (Oral)"
+        summary: 'Yupeng Hou†, Jiacheng Li†, **Xiangjun Fu**†, Zhankui He, An Yan, Xiusi Chen, Julian McAuley. († equal contribution)'
+      - title: "Latent Reasoning with Normalizing Flows"
+        date: "2026"
+        url: https://arxiv.org/abs/2606.06447
+        publisher: "Under review · arXiv:2606.06447"
+        summary: 'Guancheng Tu†, **Xiangjun Fu**†, Suhao Yu, Yao Tang, Haoqiang Kang, Lianhui Qin, Yizhe Zhang, Jiatao Gu. († equal contribution, order by coin toss)'
+      - title: "Larger Hausdorff Dimension in Scanning Pattern Facilitates Mamba-Based Methods in Low-Light Image Enhancement"
+        date: "2025"
+        url: https://arxiv.org/abs/2510.26001
+        publisher: "Under review · arXiv:2510.26001"
+        summary: 'Xinhua Wang, **Xiangjun Fu**, Caibo Feng, Chunxiao Liu.'
+
+    Teaching:
+      - bullet: "**Supplemental Instruction Leader**, Academic Achievement Hub, UC San Diego (2024–2025). Led weekly workshops for 50+ students in Physics and Calculus (~20 hrs/week), translating complex technical material into accessible, interactive lessons; iterated lesson design from student and faculty feedback and provided one-on-one mentorship."
 
     Skills:
-      - name: Machine Learning & AI
-        level: Advanced
-        icon: fa-solid fa-robot
-        keywords: "Multimodal LLMs, Normalizing Flows, Generative Models, NLP, Recommender Systems"
-
       - name: Programming
-        level: Advanced
         icon: fa-solid fa-code
-        keywords: "Python, PyTorch, C/C++, Java"
+        keywords: "Python, C/C++, Java, SQL, Bash"
+      - name: ML & NLP
+        icon: fa-solid fa-robot
+        keywords: "PyTorch, Hugging Face Transformers, LLM fine-tuning (LoRA, full fine-tuning), normalizing flows, flow matching/diffusion, VAEs, embedding models (BERT, RoBERTa, Mistral, Qwen), OpenAI / Gemini / Claude APIs"
+      - name: Tools
+        icon: fa-solid fa-screwdriver-wrench
+        keywords: "NumPy, Pandas, Matplotlib, Jupyter, Git, Linux, Vim, gdb, SLURM / HPC clusters, conda"
 
-    Interests:
-      - name: Research Interests
-        icon: fa-solid fa-flask
-        keywords: "Multimodal Large Language Models, Continuous Generative Modeling, Reasoning and Planning, Chain-of-Thought"
-
-      - name: Hobbies
-        icon: fa-solid fa-futbol
-        keywords: "Soccer, Pickleball, Sports"
+    Languages:
+      - name: English
+        summary: Fluent
+      - name: Mandarin
+        summary: Fluent
+      - name: Cantonese
+        summary: Conversational
+      - name: Spanish
+        summary: Conversational
