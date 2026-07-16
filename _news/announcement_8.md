@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Serving as a reviewer for **ACL 2026** and **NeurIPS 2026**! 📝
+Serving as a reviewer for **EMNLP 2026** (ACL Rolling Review) and **NeurIPS 2026**! 📝
