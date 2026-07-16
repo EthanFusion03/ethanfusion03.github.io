@@ -88,6 +88,9 @@ cv:
     Teaching:
       - bullet: "**Supplemental Instruction Leader**, Academic Achievement Hub, UC San Diego (2024–2025). Led weekly workshops for 50+ students in Physics and Calculus (~20 hrs/week), translating complex technical material into accessible, interactive lessons; iterated lesson design from student and faculty feedback and provided one-on-one mentorship."
 
+    Academic Service:
+      - bullet: "**Reviewer**: ACL 2026, NeurIPS 2026."
+
     Skills:
       - name: Programming
         icon: fa-solid fa-code
