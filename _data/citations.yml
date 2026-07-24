@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-10'
+  last_updated: '2026-07-24'
 papers:
   FztLF6sAAAAJ:9yKSN-GCB0IC:
     citations: 0
@@ -10,6 +10,6 @@ papers:
     title: Larger Hausdorff Dimension in Scanning Pattern Facilitates Mamba-Based Methods in Low-Light Image Enhancement
     year: '2025'
   FztLF6sAAAAJ:u5HHmVD_uO8C:
-    citations: 552
+    citations: 565
     title: 'Bridging language and items for retrieval and recommendation: Benchmarking LLMs as Semantic Encoders'
     year: '2026'
