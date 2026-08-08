@@ -8,4 +8,4 @@ category: research
 redirect: https://arxiv.org/abs/2606.06447
 ---
 
-A latent-reasoning framework that performs intermediate computation in a continuous space using normalizing flows, while preserving the advantages that make chain-of-thought effective in autoregressive LLMs: native left-to-right generation, probabilistic sampling, KV-cache-compatible decoding, and tractable likelihoods. Joint work with [Prof. Jiatao Gu](https://jiataogu.me/) and the GMLR group at the University of Pennsylvania.
+A latent-reasoning framework that performs intermediate computation in a continuous space using normalizing flows, while preserving the advantages that make chain-of-thought effective in autoregressive LLMs: native left-to-right generation, probabilistic sampling, KV-cache-compatible decoding, and tractable likelihoods. Joint work with [Prof. Jiatao Gu](https://jiataogu.me/) and the GMLR group at the University of Pennsylvania. Accepted to the COLM 2026 Workshop on Efficient Reasoning.

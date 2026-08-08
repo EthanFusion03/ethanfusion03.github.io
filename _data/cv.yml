@@ -77,7 +77,7 @@ cv:
       - title: "Latent Reasoning with Normalizing Flows"
         date: "2026"
         url: https://arxiv.org/abs/2606.06447
-        publisher: "Under review · arXiv:2606.06447"
+        publisher: "COLM 2026 Workshop on Efficient Reasoning"
         summary: 'Guancheng Tu†, **Xiangjun Fu**†, Suhao Yu, Yao Tang, Haoqiang Kang, Lianhui Qin, Yizhe Zhang, Jiatao Gu. († equal contribution, order by coin toss)'
       - title: "Larger Hausdorff Dimension in Scanning Pattern Facilitates Mamba-Based Methods in Low-Light Image Enhancement"
         date: "2025"
