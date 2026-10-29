@@ -71,6 +71,15 @@
         font-weight: bolder;
       }
 
+      .award-highlight {
+        color: var(--global-highlight-color);
+        font-weight: bold;
+
+        html[data-theme="dark"] & {
+          color: v.$red-color;
+        }
+      }
+
       .author {
         a {
           border-bottom: 1px dashed var(--global-theme-color);
