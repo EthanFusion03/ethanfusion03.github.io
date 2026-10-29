@@ -6,6 +6,7 @@ img: assets/img/publication_preview/blair1.png
 importance: 1
 category: research
 redirect: https://arxiv.org/abs/2403.03952
+github: https://github.com/hyp1231/BLaIR-Bench
 ---
 
-A novel and user-friendly benchmark for evaluating LLMs as semantic encoders in recommender system tasks. Developed at UC San Diego with [Yupeng Hou](https://yupenghou.com/) and [Prof. Julian McAuley](https://cseweb.ucsd.edu/~jmcauley/). Published at ACL 2026 (Oral).
+A novel and user-friendly benchmark for evaluating LLMs as semantic encoders in recommender system tasks. Developed at UC San Diego with [Yupeng Hou](https://yupenghou.com/) and [Prof. Julian McAuley](https://cseweb.ucsd.edu/~jmcauley/). Published at ACL 2026 (Oral). I built the accompanying benchmark toolkit, [BLaIR-Bench](https://github.com/hyp1231/BLaIR-Bench).
