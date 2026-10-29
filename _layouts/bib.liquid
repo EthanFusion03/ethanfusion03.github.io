@@ -3,28 +3,37 @@
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
-      {%- if entry.abbr -%}
-        {%- if site.data.venues[entry.abbr] -%}
+      {%- comment -%}
+        One badge per venue: `abbr`, plus an optional second `abbr2` (e.g. an under-review venue).
+        A `label` in _data/venues.yml overrides the badge text (may contain <br>).
+      {%- endcomment -%}
+      {%- assign entry_abbrs = entry.abbr | append: '|' | append: entry.abbr2 | split: '|' -%}
+      {%- for entry_abbr in entry_abbrs -%}
+        {%- if entry_abbr == blank -%}
+          {% continue %}
+        {%- endif -%}
+        {%- if site.data.venues[entry_abbr] -%}
           {% assign venue_style = null %}
-          {% if site.data.venues[entry.abbr].color != blank %}
-            {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
+          {% if site.data.venues[entry_abbr].color != blank %}
+            {% assign venue_style = site.data.venues[entry_abbr].color | prepend: 'style="background-color:' | append: '"' %}
           {%- endif -%}
+          {%- assign venue_label = site.data.venues[entry_abbr].label | default: entry_abbr -%}
           <abbr
             class="badge rounded w-100"
             {% if venue_style %}
               {{ venue_style }}
             {% endif -%}
           >
-            {% if site.data.venues[entry.abbr].url %}
-              <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
+            {% if site.data.venues[entry_abbr].url %}
+              <a href="{{ site.data.venues[entry_abbr].url }}">{{ venue_label }}</a>
             {% else %}
-              <div>{{- entry.abbr -}}</div>
+              <div>{{- venue_label -}}</div>
             {% endif %}
           </abbr>
         {% else %}
-          <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
+          <abbr class="badge rounded w-100">{{ entry_abbr }}</abbr>
         {% endif %}
-      {% endif %}
+      {%- endfor -%}
       {% if entry.preview %}
         {% if entry.preview contains '://' %}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">

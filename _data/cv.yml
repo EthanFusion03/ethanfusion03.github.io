@@ -77,8 +77,12 @@ cv:
       - title: "Latent Reasoning with Normalizing Flows"
         date: "2026"
         url: https://arxiv.org/abs/2606.06447
-        publisher: "COLM 2026 Workshop on Efficient Reasoning"
-        summary: 'Guancheng Tu†, **Xiangjun Fu**†, Suhao Yu, Yao Tang, Haoqiang Kang, Lianhui Qin, Yizhe Zhang, Jiatao Gu. († equal contribution, order by coin toss)'
+        publisher: "COLM 2026 Workshop on Efficient Reasoning · Under review at ICLR 2027"
+        summary: '**Xiangjun Fu**†, Guancheng Tu†, Suhao Yu, Yao Tang, Haoqiang Kang, Lianhui Qin, Yizhe Zhang, Jiatao Gu. († equal contribution)'
+      - title: "Decoupled Reading: Letting Demonstration-Conditioned Policies Follow Longer Compositions"
+        date: "2026"
+        publisher: "CoRL 2026 Workshop on Compositional Generalization for Real-World Robot Learning"
+        summary: 'Cheng Yang, **Xiangjun Fu**, Jiatao Gu.'
       - title: "Larger Hausdorff Dimension in Scanning Pattern Facilitates Mamba-Based Methods in Low-Light Image Enhancement"
         date: "2025"
         url: https://arxiv.org/abs/2510.26001

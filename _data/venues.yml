@@ -9,3 +9,12 @@
 "COLM WS":
   url: https://colmweb.org/
   color: "#6f42c1"
+
+"CoRL WS":
+  url: https://www.corl.org/
+  color: "#0f766e"
+
+"ICLR 2027 (under review)":
+  url: https://iclr.cc/
+  color: "#6c757d"
+  label: "ICLR 2027<br>Under Review"
