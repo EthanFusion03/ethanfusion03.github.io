@@ -3,7 +3,7 @@ layout: page
 title: Hausdorff Scanning
 description: Larger Hausdorff dimension in scanning patterns for Mamba-based low-light image enhancement
 img: assets/img/publication_preview/Hausdorff.png
-importance: 3
+importance: 4
 category: research
 redirect: https://arxiv.org/abs/2510.26001
 ---
