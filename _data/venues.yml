@@ -18,3 +18,8 @@
   url: https://iclr.cc/
   color: "#6c757d"
   label: "ICLR<br>Under Review"
+
+"CVPR (under review)":
+  url: https://cvpr.thecvf.com/
+  color: "#6c757d"
+  label: "CVPR<br>Under Review"
