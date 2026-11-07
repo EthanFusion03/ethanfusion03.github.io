@@ -6,8 +6,8 @@ subtitle: MCIS Student @ <a href='https://www.upenn.edu/' style='color:#990000;'
 
 profile:
   align: right
-  image: prof_pic.png
-  image_circular: false # crops the image to make it circular
+  image: prof_pic.jpg
+  image_circular: true # crops the image to make it circular
   more_info: >
     <p>Philadelphia, PA</p>
     <p>xjf@seas.upenn.edu</p>

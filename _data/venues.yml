@@ -13,8 +13,3 @@
 "CoRL WS":
   url: https://www.corl.org/
   color: "#0f766e"
-
-"ICLR (under review)":
-  url: https://iclr.cc/
-  color: "#6c757d"
-  label: "ICLR<br>Under Review"

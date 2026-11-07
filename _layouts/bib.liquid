@@ -2,7 +2,7 @@
 ---
 <div class="row">
   {% if site.enable_publication_thumbnails %}
-    <div class="col col-sm-2 abbr">
+    <div class="col col-sm-3 abbr">
       {%- comment -%}
         One badge per venue: `abbr`, plus an optional second `abbr2` (e.g. an under-review venue).
         A `label` in _data/venues.yml overrides the badge text (may contain <br>).
@@ -43,7 +43,7 @@
             include figure.liquid
             loading="eager"
             path=entry_path
-            sizes = "200px"
+            sizes = "260px"
             class="preview z-depth-1 rounded"
             zoomable=true
             avoid_scaling=true
@@ -55,7 +55,7 @@
   {% endif %}
 
   <!-- Entry bib key -->
-  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-9{% else %}col-sm-10{% endif %}">
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
