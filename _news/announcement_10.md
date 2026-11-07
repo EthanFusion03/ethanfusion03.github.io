@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper **"Decoupled Reading: Letting Demonstration-Conditioned Policies Follow Longer Compositions"** has been accepted to the **CoRL 2026 Workshop on Compositional Generalization for Real-World Robot Learning**! 🤖
+Our paper **"<a href="javascript:void(0)">Decoupled Reading: Letting Demonstration-Conditioned Policies Follow Longer Compositions</a>"** has been accepted to the **CoRL 2026 Workshop on Compositional Generalization for Real-World Robot Learning**! 🤖

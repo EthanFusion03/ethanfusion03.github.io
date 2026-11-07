@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-New preprint on arXiv: **"Larger Hausdorff Dimension in Scanning Pattern Facilitates Mamba-Based Methods in Low-Light Image Enhancement"** — [arXiv:2510.26001](https://arxiv.org/abs/2510.26001) 📄
+New preprint on arXiv: **"[Larger Hausdorff Dimension in Scanning Pattern Facilitates Mamba-Based Methods in Low-Light Image Enhancement](https://arxiv.org/abs/2510.26001)"** 📄

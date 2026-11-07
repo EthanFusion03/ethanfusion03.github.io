@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our **ACL 2026** paper **"Bridging Language and Items for Retrieval and Recommendation: Benchmarking LLMs as Semantic Encoders"** has been selected for an **Oral** presentation! 🎤
+Our **ACL 2026** paper **"[Bridging Language and Items for Retrieval and Recommendation: Benchmarking LLMs as Semantic Encoders](https://arxiv.org/abs/2403.03952)"** has been selected for an **Oral** presentation! 🎤
