@@ -18,54 +18,55 @@ cv:
     - network: GitHub
       username: EthanFusion03
 
+  # Rendered by _layouts/cv_profile.liquid (the /cv/ page).
+  # `logo` is a file in assets/img/; `dates` is shown verbatim under the logo.
   sections:
     Education:
       - institution: University of Pennsylvania
         url: https://www.upenn.edu/
-        studyType: "M.S.E. in Computer & Information Science"
+        logo: penn-shield.png
+        degree: M.S.E.
+        area: Computer & Information Science
         location: Philadelphia, PA
-        start_date: 2025
-        end_date: 2027
+        dates: Aug 2025 – May 2027
         highlights:
-          - "Cumulative GPA: 3.95 / 4.0"
-          - "Relevant coursework: Statistical NLP, Deep Learning, Deep Generative Modeling, Computer Vision, Reinforcement Learning, Recommender Systems & Web Mining, Machine Learning, Discrete Mathematics & Graph Theory, Probability & Statistics"
+          - "GPA: 3.95 / 4.0"
+          - "Coursework: Statistical NLP, Deep Learning, Deep Generative Modeling, Computer Vision, Reinforcement Learning, Recommender Systems & Web Mining, Machine Learning, Discrete Mathematics & Graph Theory, Probability & Statistics"
       - institution: University of California, San Diego
         url: https://ucsd.edu/
-        studyType: "B.S. in Mathematics–Computer Science"
+        logo: ucsd-seal.png
+        degree: B.S.
+        area: Mathematics–Computer Science
         location: San Diego, CA
-        start_date: 2021
-        end_date: 2025
+        dates: Sep 2021 – Jun 2025
         highlights:
-          - "Cumulative GPA: 3.9 / 4.0 · Provost Honors"
+          - "GPA: 3.9 / 4.0 · Provost Honors"
 
     Experience:
       - company: GMLR Lab, University of Pennsylvania
+        logo: penn-shield.png
         position: Graduate Researcher
-        location: Philadelphia, PA
-        start_date: 2025
-        end_date: present
-        summary: Advised by Prof. Jiatao Gu.
+        dates: Aug 2025 – Present
+        advisors: "Advised by [Prof. Jiatao Gu](https://jiataogu.me/)."
         highlights:
           - "Co-led Latent Reasoning with Normalizing Flows (co-first author), embedding an autoregressive normalizing flow in the causal stream of Qwen3-8B for continuous latent chain-of-thought reasoning with exact, tractable likelihoods."
           - "Fine-tuned an LLM-based VAE to compress explicit reasoning trajectories into structured latents, then trained prompt-conditioned flows with a unified flow + cross-entropy objective on 732K code-reasoning samples (8×B200, FSDP)."
           - "Leveraged step-wise latent log-likelihoods for density-based trajectory reranking and reinforcement learning over continuous reasoning paths; extended evaluation to math reasoning (AIME, MATH500, OlympiadBench)."
           - "Co-developed Decoupled Reading, enabling demonstration-conditioned robot manipulation policies to follow longer skill compositions than those seen in training."
       - company: McAuley Lab, UC San Diego
+        logo: ucsd-seal.png
         position: Undergraduate Researcher
-        location: San Diego, CA
-        start_date: 2024
-        end_date: 2025
-        summary: Advised by Prof. Julian McAuley and Dr. Yupeng Hou.
+        dates: Dec 2024 – Dec 2025
+        advisors: "Advised by [Prof. Julian McAuley](https://cseweb.ucsd.edu/~jmcauley/) and [Dr. Yupeng Hou](https://yupenghou.com/)."
         highlights:
           - "Co-first author on a large-scale benchmark evaluating LLMs as semantic encoders across retrieval and recommendation tasks."
           - "Built a [public Amazon dataset](https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023) with 2M+ training and 250K+ testing instances spanning collaborative filtering, sequential recommendation, and product search."
           - "Evaluated embeddings from SimCSE, E5-Mistral-7B, Qwen-7B, Gemini, and OpenAI models, analyzing their effectiveness across recommendation and retrieval settings."
       - company: Shang Data Lab, UC San Diego
+        logo: ucsd-seal.png
         position: Undergraduate Researcher
-        location: San Diego, CA
-        start_date: 2023
-        end_date: 2024
-        summary: Advised by Prof. Jingbo Shang and PhD candidate Letian Peng.
+        dates: Sep 2023 – Jun 2024
+        advisors: "Advised by [Prof. Jingbo Shang](https://shangjingbo1226.github.io/) and PhD candidate Letian Peng."
         highlights:
           - "Developed a weakly supervised text classification framework using KL-divergence alignment between token-level representations and class-prompt distributions, improving AG News accuracy from 78% to 93%."
           - "Implemented and evaluated the framework in PyTorch across BERT, RoBERTa, and Gemma on AG News and Rotten Tomatoes."
@@ -75,12 +76,12 @@ cv:
         date: "2026"
         url: https://arxiv.org/abs/2403.03952
         publisher: "ACL 2026 Main Conference (Oral)"
-        summary: 'Yupeng Hou†, Jiacheng Li†, **Xiangjun Fu**†, Zhankui He, An Yan, Xiusi Chen, Julian McAuley. († equal contribution)'
+        summary: 'Yupeng Hou†, Jiacheng Li†, **Xiangjun Fu**†, Zhankui He, An Yan, Xiusi Chen, Julian McAuley.'
       - title: "Latent Reasoning with Normalizing Flows"
         date: "2026"
         url: https://arxiv.org/abs/2606.06447
         publisher: "Under review at ICLR 2027 · COLM 2026 Workshop on Efficient Reasoning"
-        summary: '**Xiangjun Fu**†, Guancheng Tu†, Suhao Yu, Yao Tang, Haoqiang Kang, Lianhui Qin, Yizhe Zhang, Jiatao Gu. († equal contribution)'
+        summary: '**Xiangjun Fu**†, Guancheng Tu†, Suhao Yu, Yao Tang, Haoqiang Kang, Lianhui Qin, Yizhe Zhang, Jiatao Gu.'
       - title: "Decoupled Reading: Letting Demonstration-Conditioned Policies Follow Longer Compositions"
         date: "2026"
         publisher: "CoRL 2026 Workshop on Compositional Generalization for Real-World Robot Learning"
@@ -92,28 +93,21 @@ cv:
         summary: 'Xinhua Wang, **Xiangjun Fu**, Caibo Feng, Chunxiao Liu.'
 
     Teaching:
-      - bullet: "**Supplemental Instruction Leader**, Academic Achievement Hub, UC San Diego (Jul 2024 – Jun 2025). Led weekly Physics and Calculus workshops for 50+ students (20 hrs/week) with active-learning lesson plans; provided one-on-one mentorship in coordination with faculty."
+      - position: Supplemental Instruction Leader
+        organization: Academic Achievement Hub, UC San Diego
+        dates: Jul 2024 – Jun 2025
+        summary: "Led weekly Physics and Calculus workshops for 50+ students (20 hrs/week) with active-learning lesson plans; provided one-on-one mentorship in coordination with faculty."
 
     Academic Service:
-      - bullet: "**Reviewer**: EMNLP 2026 (ACL Rolling Review, May cycle), NeurIPS 2026, ICLR 2027."
+      - label: Conference Reviewing
+        details: "EMNLP 2026 (ACL Rolling Review, May cycle), NeurIPS 2026, ICLR 2027."
 
     Skills:
       - name: Programming
-        icon: fa-solid fa-code
         keywords: "Python, C/C++, Java, SQL, Bash"
       - name: ML & NLP
-        icon: fa-solid fa-robot
         keywords: "PyTorch, Hugging Face Transformers, LLM fine-tuning (LoRA, full fine-tuning), normalizing flows, flow matching/diffusion, VAEs, embedding models (BERT, RoBERTa, Mistral, Qwen), OpenAI / Gemini / Claude APIs"
       - name: Libraries & Tools
-        icon: fa-solid fa-screwdriver-wrench
         keywords: "NumPy, Pandas, Matplotlib, Jupyter, Git, Vim, gdb, SLURM / HPC clusters, conda"
-
-    Languages:
-      - name: English
-        summary: Fluent
-      - name: Mandarin
-        summary: Fluent
-      - name: Cantonese
-        summary: Conversational
-      - name: Spanish
-        summary: Conversational
+      - name: Languages
+        keywords: "English and Mandarin (fluent); Cantonese and Spanish (conversational)"

@@ -1,0 +1,170 @@
+/*******************************************************************************
+ * Profile-style CV page (_layouts/cv_profile.liquid)
+ ******************************************************************************/
+
+.cv-profile {
+  .cvp-pdf {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.85rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 4px;
+    color: var(--global-text-color);
+
+    &:hover {
+      color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+
+  .cvp-section {
+    margin-top: 2.5rem;
+  }
+
+  .cvp-heading {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+
+  .cvp-hint {
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+    margin-bottom: 0.25rem;
+  }
+
+  // Logo + dates column on the left, details on the right
+  .cvp-row,
+  .cvp-list-row {
+    display: flex;
+    gap: 1.25rem;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .cvp-row {
+    padding: 1.1rem 0;
+  }
+
+  .cvp-list-row {
+    padding: 0.8rem 0;
+  }
+
+  .cvp-side {
+    flex: 0 0 110px;
+    text-align: center;
+  }
+
+  .cvp-logo {
+    display: block;
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    margin: 0 auto 0.4rem;
+  }
+
+  .cvp-date,
+  .cvp-year {
+    font-size: 0.75rem;
+    line-height: 1.35;
+    color: var(--global-text-color-light);
+  }
+
+  .cvp-year {
+    flex: 0 0 110px;
+    padding-top: 0.2rem;
+    text-align: center;
+  }
+
+  .cvp-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cvp-title {
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+
+  .cvp-pub-title {
+    font-weight: 500;
+
+    a {
+      color: var(--global-text-color);
+
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+
+  .cvp-sub,
+  .cvp-venue {
+    font-size: 0.9rem;
+    margin-top: 0.15rem;
+    color: var(--global-text-color-light);
+  }
+
+  .cvp-sub strong {
+    color: var(--global-text-color);
+  }
+
+  .cvp-venue {
+    font-style: italic;
+  }
+
+  .cvp-bullets {
+    margin: 0.5rem 0 0;
+    padding-left: 1.1rem;
+    font-size: 0.9rem;
+
+    li {
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  // Label + text blocks (teaching, service, skills)
+  .cvp-block {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .cvp-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+    margin-bottom: 0.3rem;
+  }
+
+  .cvp-text {
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 575.98px) {
+    .cvp-row,
+    .cvp-list-row {
+      gap: 0.9rem;
+    }
+
+    .cvp-side,
+    .cvp-year {
+      flex-basis: 72px;
+    }
+
+    .cvp-logo {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
