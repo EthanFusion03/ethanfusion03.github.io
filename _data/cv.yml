@@ -67,7 +67,7 @@ cv:
         logo: ucsd-seal.png
         position: Undergraduate Researcher
         dates: Sep 2023 – Jun 2024
-        advisors: "Advised by [Prof. Jingbo Shang](https://shangjingbo1226.github.io/) and PhD candidate Letian Peng."
+        advisors: "Advised by [Prof. Jingbo Shang](https://shangjingbo1226.github.io/) and PhD candidate [Letian Peng](https://komeijiforce.github.io/)."
         highlights:
           - "Developed a weakly supervised text classification framework using KL-divergence alignment between token-level representations and class-prompt distributions, improving AG News accuracy from 78% to 93%."
           - "Implemented and evaluated the framework in PyTorch across BERT, RoBERTa, and Gemma on AG News and Rotten Tomatoes."

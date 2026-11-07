@@ -26,7 +26,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a master's student in Computer and Information Science (CIS) at the University of Pennsylvania, advised by [Prof. Jiatao Gu](https://jiataogu.me/). Before Penn, I earned my B.S. in Mathematics–Computer Science at UC San Diego, where I worked with [Dr. Yupeng Hou](https://yupenghou.com/) and [Prof. Julian McAuley](https://cseweb.ucsd.edu/~jmcauley/), and earlier with PhD candidate Letian Peng and [Prof. Jingbo Shang](https://shangjingbo1226.github.io/).
+I am a master's student in Computer and Information Science (CIS) at the University of Pennsylvania, advised by [Prof. Jiatao Gu](https://jiataogu.me/). Before Penn, I earned my B.S. in Mathematics–Computer Science at UC San Diego, where I worked with [Dr. Yupeng Hou](https://yupenghou.com/) and [Prof. Julian McAuley](https://cseweb.ucsd.edu/~jmcauley/), and earlier with PhD candidate [Letian Peng](https://komeijiforce.github.io/) and [Prof. Jingbo Shang](https://shangjingbo1226.github.io/).
 
 I'm broadly interested in **learning better representations for multimodal models and embodied agents**, especially for reasoning and planning. My past research spans Recommender Systems, Latent Reasoning, Vision Understanding, and Robot Learning.
 
