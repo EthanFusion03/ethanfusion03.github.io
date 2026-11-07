@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-New preprint on arXiv: **"[Latent Reasoning with Normalizing Flows](https://arxiv.org/abs/2606.06447)"** 📄
+New preprint on arXiv: “[Latent Reasoning with Normalizing Flows](https://arxiv.org/abs/2606.06447)” 📄
