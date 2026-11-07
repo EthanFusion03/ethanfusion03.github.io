@@ -67,6 +67,12 @@
     }
   }
 
+  // Page links (not the "ctrl k" search hint): "About", "Publications", ... in medium weight
+  .navbar-nav .nav-item a.nav-link {
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
     font-weight: bolder;

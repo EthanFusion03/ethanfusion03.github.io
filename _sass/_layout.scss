@@ -33,6 +33,11 @@ body.sticky-bottom-footer {
   max-width: v.$max-content-width;
 }
 
+// Leave room for the fixed navbar when jumping to /#selected-publications
+#selected-publications {
+  scroll-margin-top: 70px;
+}
+
 // Profile
 .profile {
   img {
