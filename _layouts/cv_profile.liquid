@@ -2,84 +2,93 @@
 layout: default
 ---
 {% comment %}
-  Profile-style CV page (logo + dates column, clean section list).
-  Data: _data/cv.yml -> cv.sections (Education, Experience, Publications, Teaching, Academic Service, Skills).
+  Profile-style CV page: logo + dates timeline, eyebrow cards, year lists.
+  Data: _data/cv.yml -> cv.sections (Education, Experience, Publications, Teaching, Academic Service, Skills)
+  and cv.coursework. Styles: _sass/_cv_profile.scss.
 {% endcomment %}
-{% assign sections = site.data.cv.cv.sections %}
+{% assign cv = site.data.cv.cv %}
+{% assign sections = cv.sections %}
 
 <div class="post cv-profile">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    {% if page.description %}
-      <p class="post-description">{{ page.description }}</p>
-    {% endif %}
-    {% if page.cv_pdf %}
-      <a
-        class="cvp-pdf"
-        {% if page.cv_pdf contains '://' %}
-          href="{{ page.cv_pdf }}"
-        {% else %}
-          href="{{ page.cv_pdf | relative_url }}"
-        {% endif %}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i class="fa-solid fa-file-pdf"></i> Download PDF
-      </a>
-    {% endif %}
-  </header>
-
   <article>
     {% if sections.Education %}
       <section class="cvp-section" id="education">
-        <h2 class="cvp-heading">Education</h2>
-        {% for e in sections.Education %}
-          <div class="cvp-row">
-            <div class="cvp-side">
-              {% if e.logo %}
-                <img class="cvp-logo" src="{{ e.logo | prepend: '/assets/img/' | relative_url }}" alt="{{ e.institution }}">
+        <div class="cvp-heading-row">
+          <h2 class="cvp-heading">Education</h2>
+          {% if page.cv_pdf %}
+            <a
+              class="cvp-chip"
+              {% if page.cv_pdf contains '://' %}
+                href="{{ page.cv_pdf }}"
+              {% else %}
+                href="{{ page.cv_pdf | relative_url }}"
               {% endif %}
-              <div class="cvp-date">{{ e.dates | replace: ' – ', ' –<br>' }}</div>
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-solid fa-arrow-down"></i> CV (PDF)
+            </a>
+          {% endif %}
+        </div>
+        <div class="cvp-timeline">
+          {% for e in sections.Education %}
+            <div class="cvp-entry">
+              <div class="cvp-entry__meta">
+                {% if e.logo %}
+                  <img class="cvp-entry__logo" src="{{ e.logo | prepend: '/assets/img/' | relative_url }}" alt="{{ e.institution }}">
+                {% endif %}
+                <span class="cvp-entry__time">{{ e.dates | replace: ' – ', ' –<br>' }}</span>
+              </div>
+              <div class="cvp-entry__content">
+                <span class="cvp-entry__time-inline">{{ e.dates }}</span>
+                <h3 class="cvp-entry__title">{{ e.degree }}, {{ e.institution }}, {{ e.location }}</h3>
+                <p class="cvp-entry__role">{{ e.area }}</p>
+                {% for h in e.highlights %}
+                  <p class="cvp-entry__note">{{ h | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+                {% endfor %}
+              </div>
             </div>
-            <div class="cvp-main">
-              <div class="cvp-title">{{ e.degree }}, {{ e.institution }}, {{ e.location }}</div>
-              <div class="cvp-sub">{{ e.area }}</div>
-              {% for h in e.highlights %}
-                <div class="cvp-sub">{{ h | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
-              {% endfor %}
-            </div>
+          {% endfor %}
+        </div>
+        {% if cv.coursework %}
+          <div class="cvp-card cvp-card--after-timeline">
+            <p class="cvp-eyebrow">Relevant Coursework</p>
+            <p class="cvp-card__text">{{ cv.coursework }}</p>
           </div>
-        {% endfor %}
+        {% endif %}
       </section>
     {% endif %}
 
     {% if sections.Experience %}
       <section class="cvp-section" id="experience">
         <h2 class="cvp-heading">Research Experience</h2>
-        {% for x in sections.Experience %}
-          <div class="cvp-row">
-            <div class="cvp-side">
-              {% if x.logo %}
-                <img class="cvp-logo" src="{{ x.logo | prepend: '/assets/img/' | relative_url }}" alt="{{ x.company }}">
-              {% endif %}
-              <div class="cvp-date">{{ x.dates | replace: ' – ', ' –<br>' }}</div>
+        <div class="cvp-timeline">
+          {% for x in sections.Experience %}
+            <div class="cvp-entry">
+              <div class="cvp-entry__meta">
+                {% if x.logo %}
+                  <img class="cvp-entry__logo" src="{{ x.logo | prepend: '/assets/img/' | relative_url }}" alt="{{ x.company }}">
+                {% endif %}
+                <span class="cvp-entry__time">{{ x.dates | replace: ' – ', ' –<br>' }}</span>
+              </div>
+              <div class="cvp-entry__content">
+                <span class="cvp-entry__time-inline">{{ x.dates }}</span>
+                <h3 class="cvp-entry__title">{{ x.company }}</h3>
+                <p class="cvp-entry__role">{{ x.position }}</p>
+                {% if x.advisors %}
+                  <p class="cvp-entry__note">{{ x.advisors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+                {% endif %}
+                {% if x.highlights %}
+                  <ul class="cvp-entry__list">
+                    {% for h in x.highlights %}
+                      <li>{{ h | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
             </div>
-            <div class="cvp-main">
-              <div class="cvp-title">{{ x.company }}</div>
-              <div class="cvp-sub">{{ x.position }}</div>
-              {% if x.advisors %}
-                <div class="cvp-sub">{{ x.advisors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
-              {% endif %}
-              {% if x.highlights %}
-                <ul class="cvp-bullets">
-                  {% for h in x.highlights %}
-                    <li>{{ h | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
       </section>
     {% endif %}
 
@@ -87,16 +96,35 @@ layout: default
       <section class="cvp-section" id="publications">
         <h2 class="cvp-heading">Publications</h2>
         <p class="cvp-hint">† equal contribution</p>
-        {% for p in sections.Publications %}
-          <div class="cvp-list-row">
-            <div class="cvp-year">{{ p.date }}</div>
-            <div class="cvp-main">
-              <div class="cvp-pub-title">
-                {% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
+        <ul class="cvp-list">
+          {% for p in sections.Publications %}
+            <li>
+              <span class="cvp-list__year">{{ p.date }}</span>
+              <div class="cvp-list__text">
+                <div class="cvp-pub__title">
+                  {% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
+                </div>
+                <div class="cvp-pub__authors">{{ p.summary | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+                <div class="cvp-pub__venue">
+                  <span class="cvp-pub__venue-name">{{ p.publisher }}</span>
+                  {%- for l in p.links -%}
+                    <span class="cvp-dot">·</span><a class="cvp-link" href="{{ l.url }}">{{ l.name }}</a>
+                  {%- endfor -%}
+                </div>
               </div>
-              <div class="cvp-sub">{{ p.summary | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
-              <div class="cvp-venue">{{ p.publisher }}</div>
-            </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+
+    {% if sections['Academic Service'] %}
+      <section class="cvp-section" id="service">
+        <h2 class="cvp-heading">Professional Service</h2>
+        {% for sv in sections['Academic Service'] %}
+          <div class="cvp-card">
+            <p class="cvp-eyebrow">{{ sv.label }}</p>
+            <p class="cvp-card__text">{{ sv.details }}</p>
           </div>
         {% endfor %}
       </section>
@@ -106,22 +134,10 @@ layout: default
       <section class="cvp-section" id="teaching">
         <h2 class="cvp-heading">Teaching</h2>
         {% for t in sections.Teaching %}
-          <div class="cvp-block">
-            <div class="cvp-label">{{ t.dates }}</div>
-            <div class="cvp-title">{{ t.position }}</div>
-            <div class="cvp-sub">{{ t.organization }}. {{ t.summary }}</div>
-          </div>
-        {% endfor %}
-      </section>
-    {% endif %}
-
-    {% if sections['Academic Service'] %}
-      <section class="cvp-section" id="service">
-        <h2 class="cvp-heading">Professional Service</h2>
-        {% for sv in sections['Academic Service'] %}
-          <div class="cvp-block">
-            <div class="cvp-label">{{ sv.label }}</div>
-            <div class="cvp-text">{{ sv.details }}</div>
+          <div class="cvp-teaching">
+            <div class="cvp-eyebrow">{{ t.dates }}</div>
+            <div class="cvp-teaching__course">{{ t.position }}</div>
+            <p class="cvp-teaching__meta">{{ t.organization }}. {{ t.summary }}</p>
           </div>
         {% endfor %}
       </section>
@@ -131,9 +147,9 @@ layout: default
       <section class="cvp-section" id="skills">
         <h2 class="cvp-heading">Skills</h2>
         {% for sk in sections.Skills %}
-          <div class="cvp-block">
-            <div class="cvp-label">{{ sk.name }}</div>
-            <div class="cvp-text">{{ sk.keywords }}</div>
+          <div class="cvp-card">
+            <p class="cvp-eyebrow">{{ sk.name }}</p>
+            <p class="cvp-card__text">{{ sk.keywords }}</p>
           </div>
         {% endfor %}
       </section>

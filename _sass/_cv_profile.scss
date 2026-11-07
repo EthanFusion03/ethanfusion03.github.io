@@ -1,170 +1,371 @@
 /*******************************************************************************
  * Profile-style CV page (_layouts/cv_profile.liquid)
+ * Typography & palette follow a Lora (serif) + Inter Tight (sans) editorial look.
  ******************************************************************************/
 
 .cv-profile {
-  .cvp-pdf {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.3rem 0.8rem;
-    font-size: 0.85rem;
-    border: 1px solid var(--global-divider-color);
-    border-radius: 4px;
-    color: var(--global-text-color);
+  --cvp-ink: #141413; // primary text
+  --cvp-sub: #5e5d59; // secondary text
+  --cvp-muted: #87867f; // dates, labels, meta
+  --cvp-strong: #3d3d3a; // emphasized secondary / small links
+  --cvp-rule: #e8e6dc; // dividers
+  --cvp-link: #2a7ae2; // inline links (advisors, datasets)
+  --cvp-serif: "Lora", Georgia, serif;
+  --cvp-sans: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  font-family: var(--cvp-serif);
+  color: var(--cvp-ink);
+
+  html[data-theme="dark"] & {
+    --cvp-ink: #ecebe6;
+    --cvp-sub: #c4c2b9;
+    --cvp-muted: #9b9990;
+    --cvp-strong: #dedcd4;
+    --cvp-rule: #3a3935;
+    --cvp-link: #7fb2ff;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  // ── Sections ──
+  .cvp-section {
+    margin-top: 80px;
+
+    &:first-child {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .cvp-heading-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .cvp-heading {
+    margin: 0 0 20px;
+    font-family: var(--cvp-serif);
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--cvp-ink);
+  }
+
+  .cvp-chip {
+    font-family: var(--cvp-sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--cvp-strong);
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--cvp-rule);
+    border-radius: 999px;
+    white-space: nowrap;
+
+    i {
+      font-size: 0.7rem;
+      margin-right: 0.2rem;
+    }
 
     &:hover {
-      color: var(--global-theme-color);
-      border-color: var(--global-theme-color);
+      color: var(--cvp-ink);
+      border-color: var(--cvp-muted);
       text-decoration: none;
     }
   }
 
-  .cvp-section {
-    margin-top: 2.5rem;
-  }
-
-  .cvp-heading {
-    font-size: 1.75rem;
-    font-weight: 500;
-    margin-bottom: 0.75rem;
-  }
-
   .cvp-hint {
-    font-size: 0.8rem;
-    color: var(--global-text-color-light);
-    margin-bottom: 0.25rem;
+    margin: -8px 0 16px;
+    font-family: var(--cvp-sans);
+    font-size: 0.75rem;
+    color: var(--cvp-muted);
   }
 
-  // Logo + dates column on the left, details on the right
-  .cvp-row,
-  .cvp-list-row {
+  .cvp-eyebrow {
+    margin: 0 0 8px;
+    font-family: var(--cvp-sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--cvp-muted);
+  }
+
+  // ── Timeline entries (logo + dates | details) ──
+  .cvp-entry {
     display: flex;
-    gap: 1.25rem;
-    border-bottom: 1px solid var(--global-divider-color);
+    gap: 20px;
+    align-items: flex-start;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--cvp-rule);
+
+    &:first-child {
+      padding-top: 2px;
+    }
 
     &:last-child {
       border-bottom: none;
+      padding-bottom: 0;
     }
   }
 
-  .cvp-row {
-    padding: 1.1rem 0;
+  .cvp-entry__meta {
+    flex: 0 0 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding-top: 2px;
   }
 
-  .cvp-list-row {
-    padding: 0.8rem 0;
-  }
-
-  .cvp-side {
-    flex: 0 0 110px;
-    text-align: center;
-  }
-
-  .cvp-logo {
-    display: block;
-    width: 44px;
-    height: 44px;
+  .cvp-entry__logo {
+    width: 40px;
+    max-height: 40px;
+    height: auto;
     object-fit: contain;
-    margin: 0 auto 0.4rem;
+    filter: grayscale(0.25) opacity(0.85);
   }
 
-  .cvp-date,
-  .cvp-year {
-    font-size: 0.75rem;
+  .cvp-entry__time,
+  .cvp-entry__time-inline {
+    font-family: var(--cvp-sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
     line-height: 1.35;
-    color: var(--global-text-color-light);
-  }
-
-  .cvp-year {
-    flex: 0 0 110px;
-    padding-top: 0.2rem;
+    color: var(--cvp-muted);
     text-align: center;
   }
 
-  .cvp-main {
+  .cvp-entry__time-inline {
+    display: none;
+  }
+
+  .cvp-entry__content {
     flex: 1;
     min-width: 0;
   }
 
-  .cvp-title {
+  .cvp-entry__title {
+    margin: 0 0 4px;
+    font-family: var(--cvp-serif);
     font-size: 1.05rem;
     font-weight: 500;
+    line-height: 1.6;
+    color: var(--cvp-ink);
   }
 
-  .cvp-pub-title {
+  .cvp-entry__role {
+    margin-bottom: 5px;
+    font-family: var(--cvp-sans);
+    font-size: 0.92rem;
     font-weight: 500;
+    color: var(--cvp-sub);
+  }
+
+  .cvp-entry__note {
+    margin-bottom: 4px;
+    font-family: var(--cvp-sans);
+    font-size: 0.9rem;
+    color: var(--cvp-muted);
 
     a {
-      color: var(--global-text-color);
+      color: var(--cvp-link);
+    }
+  }
 
-      &:hover {
-        color: var(--global-theme-color);
+  .cvp-entry__list {
+    margin: 10px 0 0;
+    padding-left: 16px;
+    font-size: 0.93rem;
+    line-height: 1.7;
+    color: var(--cvp-sub);
+
+    li {
+      margin-bottom: 5px;
+      color: var(--cvp-sub);
+    }
+
+    a {
+      color: var(--cvp-link);
+    }
+  }
+
+  // ── Eyebrow cards (coursework, service, skills) ──
+  .cvp-card {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--cvp-rule);
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  .cvp-card--after-timeline {
+    margin-top: 22px;
+    padding-top: 22px !important;
+    border-top: 1px solid var(--cvp-rule);
+  }
+
+  .cvp-card__text {
+    font-size: 0.93rem;
+    line-height: 1.7;
+    color: var(--cvp-sub);
+  }
+
+  // ── Year lists (publications) ──
+  .cvp-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: flex;
+      gap: 20px;
+      align-items: baseline;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--cvp-rule);
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
       }
     }
   }
 
-  .cvp-sub,
-  .cvp-venue {
-    font-size: 0.9rem;
-    margin-top: 0.15rem;
-    color: var(--global-text-color-light);
+  .cvp-list__year {
+    flex-shrink: 0;
+    min-width: 60px;
+    font-family: var(--cvp-sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--cvp-muted);
   }
 
-  .cvp-sub strong {
-    color: var(--global-text-color);
+  .cvp-list__text {
+    flex: 1;
+    min-width: 0;
   }
 
-  .cvp-venue {
+  .cvp-pub__title {
+    font-size: 0.98rem;
+    font-weight: 500;
+    line-height: 1.55;
+    color: var(--cvp-ink);
+
+    a {
+      color: var(--cvp-ink);
+
+      &:hover {
+        color: var(--cvp-link);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .cvp-pub__authors,
+  .cvp-pub__venue {
+    margin-top: 3px;
+    font-size: 0.86rem;
+    line-height: 1.55;
+    color: var(--cvp-muted);
+  }
+
+  .cvp-pub__authors strong {
+    color: var(--cvp-ink);
+    font-weight: 500;
+  }
+
+  .cvp-pub__venue-name {
     font-style: italic;
+    color: var(--cvp-muted);
   }
 
-  .cvp-bullets {
-    margin: 0.5rem 0 0;
-    padding-left: 1.1rem;
+  .cvp-dot {
+    margin: 0 0.45rem;
+    color: var(--cvp-muted);
+  }
+
+  .cvp-link {
+    font-family: var(--cvp-sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--cvp-strong);
+    border-bottom: 1px solid var(--cvp-rule);
+
+    &:hover {
+      color: var(--cvp-ink);
+      border-bottom-color: var(--cvp-muted);
+      text-decoration: none;
+    }
+  }
+
+  // ── Teaching ──
+  .cvp-teaching {
+    margin-top: 20px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .cvp-teaching__course {
+    margin: 6px 0 4px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--cvp-ink);
+  }
+
+  .cvp-teaching__meta {
     font-size: 0.9rem;
-
-    li {
-      margin-bottom: 0.3rem;
-    }
+    line-height: 1.6;
+    color: var(--cvp-sub);
   }
 
-  // Label + text blocks (teaching, service, skills)
-  .cvp-block {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid var(--global-divider-color);
-
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-
-  .cvp-label {
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--global-text-color-light);
-    margin-bottom: 0.3rem;
-  }
-
-  .cvp-text {
-    font-size: 0.95rem;
-  }
-
-  @media (max-width: 575.98px) {
-    .cvp-row,
-    .cvp-list-row {
-      gap: 0.9rem;
+  // ── Phones: dates move next to the title, logo column shrinks ──
+  @media (max-width: 640px) {
+    .cvp-section {
+      margin-top: 56px;
     }
 
-    .cvp-side,
-    .cvp-year {
-      flex-basis: 72px;
+    .cvp-heading {
+      font-size: 1.6rem;
     }
 
-    .cvp-logo {
-      width: 36px;
-      height: 36px;
+    .cvp-entry {
+      gap: 14px;
+    }
+
+    .cvp-entry__meta {
+      flex: 0 0 36px;
+    }
+
+    .cvp-entry__logo {
+      width: 32px;
+      max-height: 32px;
+    }
+
+    .cvp-entry__time {
+      display: none;
+    }
+
+    .cvp-entry__time-inline {
+      display: block;
+      text-align: left;
+      margin-bottom: 2px;
     }
   }
 }

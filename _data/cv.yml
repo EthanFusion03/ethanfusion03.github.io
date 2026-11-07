@@ -18,6 +18,8 @@ cv:
     - network: GitHub
       username: EthanFusion03
 
+  coursework: "Statistical NLP, Deep Learning, Deep Generative Modeling, Computer Vision, Reinforcement Learning, Recommender Systems & Web Mining, Machine Learning, Discrete Mathematics & Graph Theory, Probability & Statistics"
+
   # Rendered by _layouts/cv_profile.liquid (the /cv/ page).
   # `logo` is a file in assets/img/; `dates` is shown verbatim under the logo.
   sections:
@@ -31,7 +33,6 @@ cv:
         dates: Aug 2025 – May 2027
         highlights:
           - "GPA: 3.95 / 4.0"
-          - "Coursework: Statistical NLP, Deep Learning, Deep Generative Modeling, Computer Vision, Reinforcement Learning, Recommender Systems & Web Mining, Machine Learning, Discrete Mathematics & Graph Theory, Probability & Statistics"
       - institution: University of California, San Diego
         url: https://ucsd.edu/
         logo: ucsd-seal.png
@@ -76,11 +77,21 @@ cv:
         date: "2026"
         url: https://arxiv.org/abs/2403.03952
         publisher: "ACL 2026 Main Conference (Oral)"
+        links:
+          - name: arXiv
+            url: https://arxiv.org/abs/2403.03952
+          - name: Code
+            url: https://github.com/hyp1231/BLaIR-Bench
         summary: 'Yupeng Hou†, Jiacheng Li†, **Xiangjun Fu**†, Zhankui He, An Yan, Xiusi Chen, Julian McAuley.'
       - title: "Latent Reasoning with Normalizing Flows"
         date: "2026"
         url: https://arxiv.org/abs/2606.06447
         publisher: "Under review at ICLR 2027 · COLM 2026 Workshop on Efficient Reasoning"
+        links:
+          - name: arXiv
+            url: https://arxiv.org/abs/2606.06447
+          - name: Demo
+            url: https://nf-cot.vercel.app
         summary: '**Xiangjun Fu**†, Guancheng Tu†, Suhao Yu, Yao Tang, Haoqiang Kang, Lianhui Qin, Yizhe Zhang, Jiatao Gu.'
       - title: "Decoupled Reading: Letting Demonstration-Conditioned Policies Follow Longer Compositions"
         date: "2026"
@@ -89,14 +100,17 @@ cv:
       - title: "Larger Hausdorff Dimension in Scanning Pattern Facilitates Mamba-Based Methods in Low-Light Image Enhancement"
         date: "2025"
         url: https://arxiv.org/abs/2510.26001
-        publisher: "Under review · arXiv:2510.26001"
+        publisher: "Under review"
+        links:
+          - name: arXiv
+            url: https://arxiv.org/abs/2510.26001
         summary: 'Xinhua Wang, **Xiangjun Fu**, Caibo Feng, Chunxiao Liu.'
 
     Teaching:
-      - position: Supplemental Instruction Leader
+      - position: Supplemental Instruction Leader — Physics & Calculus
         organization: Academic Achievement Hub, UC San Diego
         dates: Jul 2024 – Jun 2025
-        summary: "Led weekly Physics and Calculus workshops for 50+ students (20 hrs/week) with active-learning lesson plans; provided one-on-one mentorship in coordination with faculty."
+        summary: "Led weekly workshops for 50+ students (20 hrs/week) with active-learning lesson plans; provided one-on-one mentorship in coordination with faculty."
 
     Academic Service:
       - label: Conference Reviewing
