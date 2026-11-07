@@ -24,6 +24,11 @@ body {
   font-weight: 400;
 }
 
+// Homepage section titles (News, Selected Publications, Visitor Flow)
+h2.section-heading {
+  font-weight: 500;
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }

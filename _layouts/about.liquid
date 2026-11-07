@@ -42,24 +42,24 @@ layout: default
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+      <h2 class="section-heading">
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+      <h2 class="section-heading">
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Posts</a>
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2 id="selected-publications">
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+      <h2 id="selected-publications" class="section-heading">
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
@@ -78,7 +78,7 @@ layout: default
     {% endif %}
 
     <!-- Visitor Flow -->
-    <h2>visitor flow</h2>
+    <h2 class="section-heading">Visitor Flow</h2>
     <div style="text-align: center; margin-top: 1rem; max-width: 400px; margin-left: auto; margin-right: auto;">
       <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=P75QEoZmAfQdk7sjFPiHao8ejT9Vg2Lkv49hlFz8P_Y&cl=ffffff&w=a"></script>
     </div>
