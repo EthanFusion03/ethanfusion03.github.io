@@ -30,5 +30,5 @@ I am a master's student in Computer and Information Science (CIS) at the Univers
 
 I'm broadly interested in **learning better representations for multimodal models and embodied agents**, especially for reasoning and planning. My past research spans Recommender Systems, Latent Reasoning, Vision Understanding, and Robot Learning.
 
-Outside of research, you'll find me on a soccer field ⚽, a pickleball court 🥒, or just about any sports venues!
+Outside of research, you'll find me on a soccer field ⚽, a pickleball court 🥒, or trying out any new activities!
 
