@@ -95,7 +95,11 @@ cv:
         summary: '**Xiangjun Fu**†, Guancheng Tu†, Suhao Yu, Yao Tang, Haoqiang Kang, Lianhui Qin, Yizhe Zhang, Jiatao Gu.'
       - title: "Decoupled Reading: Letting Demonstration-Conditioned Policies Follow Longer Compositions"
         date: "2026"
+        url: https://openreview.net/pdf?id=OudVNLUXDo
         publisher: "CoRL 2026 Workshop on Compositional Generalization for Real-World Robot Learning"
+        links:
+          - name: PDF
+            url: https://openreview.net/pdf?id=OudVNLUXDo
         summary: 'Cheng Yang, **Xiangjun Fu**, Jiatao Gu.'
       - title: "Larger Hausdorff Dimension in Scanning Pattern Facilitates Mamba-Based Methods in Low-Light Image Enhancement"
         date: "2025"
